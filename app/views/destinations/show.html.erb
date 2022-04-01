@@ -2,9 +2,30 @@
 
 <%= render @destination %>
 
+<p>
+    <div id="map"></div>
+</p>
+
 
 <div>
   <%= link_to "Edit this destination", edit_destination_path(@destination) %> |
   <%= link_to "Back to destinations", destinations_path %>
   <%= button_to "Destroy this destination", @destination, method: :delete %>
 </div>
+
+<script>
+
+function initMap(lat, lng) {
+  console.log("hello")
+  var myCoords = new google.maps.LatLng(lat, lng);
+  var mapOptions = {
+    center: myCoords,
+    zoom: 14
+  };
+  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+}
+
+  document.addEventListener("DOMContentLoaded", function() {
+    initMap(<%=@destination.latitude%>, <%=@destination.longitude%>)
+  });
+</script>
