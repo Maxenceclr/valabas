@@ -18,13 +18,7 @@
   margin-top : 15vh;
 }
 
-@import "bootstrap";
-
  #map {
   width: 600px;
   height: 400px;
-}
-
-#destinations {
-  border: 3px;
 }
