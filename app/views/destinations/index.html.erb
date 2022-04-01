@@ -2,9 +2,12 @@
 
 <h1 class="text-center">Destinations</h1>
 
-<div id="destinations">
+
+<div class="container align-items-center" id="destinations">
   <% @destinations.each do |destination| %>
+  <div class="border">
     <%= render destination %>
+  </div>
     <p>
       <%= link_to "Show this destination", destination %>
     </p>
