@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+.m_de_batard{
+  margin-top : 15vh;
+}
+
+@import "bootstrap";
+
  #map {
   width: 600px;
   height: 400px;
