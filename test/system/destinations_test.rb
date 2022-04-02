@@ -10,18 +10,18 @@ class DestinationsTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Destinations"
   end
 
-  test "should create destination" do
+  test "should Créer la destination" do
     visit destinations_url
-    click_on "New destination"
+    click_on "Nouvelle destination"
 
     fill_in "Date", with: @destination.date
     fill_in "Latitude", with: @destination.latitude
     fill_in "Longitude", with: @destination.longitude
     fill_in "Message", with: @destination.message
     fill_in "Pseudo", with: @destination.pseudo
-    click_on "Create Destination"
+    click_on "Nouvelle destination"
 
-    assert_text "Destination was successfully created"
+    assert_text "La destination a bien été créer"
     click_on "Back"
   end
 

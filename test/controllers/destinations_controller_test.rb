@@ -15,7 +15,7 @@ class DestinationsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create destination" do
+  test "should Créer la destination" do
     assert_difference("Destination.count") do
       post destinations_url, params: { destination: { date: @destination.date, latitude: @destination.latitude, longitude: @destination.longitude, message: @destination.message, pseudo: @destination.pseudo } }
     end
